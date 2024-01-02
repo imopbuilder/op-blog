@@ -1,9 +1,13 @@
 import Header from '@/components/global/header';
+import { Fragment } from 'react';
 
 export default function Home() {
 	return (
-		<main>
+		<Fragment>
 			<Header />
-		</main>
+			<main className='h-[500vh]'>
+				<div>hello world</div>
+			</main>
+		</Fragment>
 	);
 }
