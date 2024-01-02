@@ -1,3 +1,4 @@
+import Footer from '@/components/global/footer';
 import Header from '@/components/global/header';
 import Image from 'next/image';
 import { Fragment } from 'react';
@@ -17,6 +18,7 @@ export default function Home() {
 					</div>
 				</section>
 			</main>
+			<Footer />
 		</Fragment>
 	);
 }
