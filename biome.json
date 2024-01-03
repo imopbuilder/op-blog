@@ -31,7 +31,8 @@
 	"formatter": {
 		"ignore": ["configuration-schema.json"],
 		"enabled": true,
-		"indentStyle": "tab",
+		"indentStyle": "space",
+		"indentWidth": 4,
 		"lineWidth": 150
 	},
 	"javascript": {
