@@ -17,6 +17,9 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
+				<section>
+					<div className='mx-[4%]'>{/* <div className='pt-24'></div> */}</div>
+				</section>
 			</main>
 			<Footer />
 		</Fragment>
