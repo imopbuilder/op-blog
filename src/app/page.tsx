@@ -34,7 +34,7 @@ export default function Home() {
                         <div className=''>
                             <h2 className='text-5xl border-b font-semibold pt-20 pb-4'>Our Posts</h2>
                         </div>
-                        <div className='pb-5 grid 2xl:grid-cols-4 xl:grid-cols-4 gap-5'>
+                        <div className='py-5 grid 2xl:grid-cols-4 xl:grid-cols-4 gap-5'>
                             <AllBlogsPreview />
                         </div>
                     </div>
