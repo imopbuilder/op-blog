@@ -1,8 +1,13 @@
 import Footer from '@/components/global/footer';
 import Header from '@/components/global/header';
 import AllBlogsPreview from '@/components/pages/home';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { Fragment } from 'react';
+
+export const metadata: Metadata = {
+    title: 'Op Blog - Home',
+};
 
 export default function Home() {
     return (

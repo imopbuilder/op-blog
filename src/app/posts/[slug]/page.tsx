@@ -11,6 +11,16 @@ type PageProps = {
     };
 };
 
+export function generateMetadata({ params }: PageProps) {
+    const post = getPost(params.slug);
+
+    if (!post) return { title: 'Not Found.' };
+
+    return {
+        title: post.title,
+    };
+}
+
 export default function page({ params }: PageProps) {
     const post = getPost(params.slug);
 
