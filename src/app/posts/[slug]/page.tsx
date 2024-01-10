@@ -1,7 +1,6 @@
 import Footer from '@/components/global/footer';
 import Header from '@/components/global/header';
-import { Mdx } from '@/components/global/mdx';
-import { getPost } from '@/components/pages/posts/post';
+import { BlogContent, getPost } from '@/components/pages/posts/post';
 import { allPosts } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
 import { Fragment } from 'react';
@@ -33,7 +32,7 @@ export default function page({ params }: PageProps) {
             <main className='mx-5'>
                 <section>
                     <div className='min-h-hvh'>
-                        <Mdx post={post} />
+                        <BlogContent post={post} />
                     </div>
                 </section>
             </main>
