@@ -30,11 +30,11 @@ export default function Home() {
                     <div className='mx-[4%]'>{/* <div className='pt-24'></div> */}</div>
                 </section>
                 <section>
-                    <div className='mx-[4%]'>
-                        <div>
-                            <h2 className='text-7xl font-semibold pt-20 pb-6'>Our Stories</h2>
+                    <div className='mx-5'>
+                        <div className=''>
+                            <h2 className='text-5xl border-b font-semibold pt-20 pb-4'>Our Posts</h2>
                         </div>
-                        <div className='grid grid-cols-2 gap-10'>
+                        <div className='pb-5 grid 2xl:grid-cols-4 xl:grid-cols-4 gap-5'>
                             <AllBlogsPreview />
                         </div>
                     </div>

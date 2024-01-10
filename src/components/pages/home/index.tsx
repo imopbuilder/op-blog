@@ -1,25 +1,26 @@
 import { allPosts, Post } from 'contentlayer/generated';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Fragment } from 'react';
 
 export default function AllBlogsPreview() {
     return (
-        <div>
+        <Fragment>
             {allPosts.map((post) => (
                 <BlogPreviewCard key={post._id} {...post} />
             ))}
-        </div>
+        </Fragment>
     );
 }
 
-function BlogPreviewCard({ thumbnail, title, description, date }: Post) {
+function BlogPreviewCard({ thumbnail, title, date, _raw }: Post) {
     return (
-        <div>
+        <Link href={_raw.flattenedPath}>
             <div>
                 <Image src={`/posts/thumbnail/${thumbnail}`} className='w-full h-auto' width={100} height={100} alt={'post-image'} />
             </div>
-            <h2>{title}</h2>
+            <h2 className='font-medium'>{title}</h2>
             <p>{date}</p>
-            <p>{description}</p>
-        </div>
+        </Link>
     );
 }
