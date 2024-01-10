@@ -8,11 +8,11 @@ export default function Home() {
     return (
         <Fragment>
             <Header />
-            <main className='pr-5'>
+            <main>
                 <section>
-                    <div className='mx-[4%]'>
-                        <div className='pt-24'>
-                            <h2 className='text-8xl font-bold pb-12'>Op Blog.</h2>
+                    <div className='mx-5'>
+                        <div>
+                            <h2 className='text-8xl font-bold pt-24 pb-24'>Blog</h2>
                             <hr className='border-muted-foreground/60' />
                             <Image
                                 src={'/ui/hero-image.png'}
@@ -30,11 +30,9 @@ export default function Home() {
                     <div className='mx-[4%]'>{/* <div className='pt-24'></div> */}</div>
                 </section>
                 <section>
-                    <div className='mx-5'>
-                        <div className=''>
-                            <h2 className='text-5xl border-b font-semibold pt-20 pb-4'>Our Posts</h2>
-                        </div>
-                        <div className='py-5 grid 2xl:grid-cols-4 xl:grid-cols-4 gap-5'>
+                    <div className='mx-5 py-6'>
+                        <h2 className='text-5xl border-b font-semibold pt-20 pb-4 mb-5'>Our Posts</h2>
+                        <div className='grid 2xl:grid-cols-4 xl:grid-cols-4 gap-5'>
                             <AllBlogsPreview />
                         </div>
                     </div>
