@@ -13,13 +13,15 @@ export default function AllBlogsPreview() {
     );
 }
 
-function BlogPreviewCard({ thumbnail, title, date, _raw }: Post) {
+function BlogPreviewCard(props: Post) {
+    const { thumbnail, title, date, url } = props;
+
     return (
-        <Link href={_raw.flattenedPath}>
-            <div>
+        <Link href={url} className='group'>
+            <div className='overflow-hidden'>
                 <Image
                     src={`/posts/thumbnail/${thumbnail}`}
-                    className='w-full h-auto'
+                    className='w-full h-auto aspect-square group-hover:scale-110 duration-200'
                     width={100}
                     height={100}
                     alt={'post-image'}
@@ -27,8 +29,8 @@ function BlogPreviewCard({ thumbnail, title, date, _raw }: Post) {
                     unoptimized
                 />
             </div>
-            <h2 className='font-medium'>{title}</h2>
-            <p>{date}</p>
+            <h2 className='font-semibold pt-3 pb-1.5'>{title}</h2>
+            <p className='text-sm'>{date}</p>
         </Link>
     );
 }
