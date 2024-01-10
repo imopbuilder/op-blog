@@ -2,6 +2,7 @@ import Footer from '@/components/global/footer';
 import Header from '@/components/global/header';
 import { Mdx } from '@/components/global/mdx';
 import { getPost } from '@/components/pages/posts/post';
+import { allPosts } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
 import { Fragment } from 'react';
 
@@ -39,4 +40,8 @@ export default function page({ params }: PageProps) {
             <Footer />
         </Fragment>
     );
+}
+
+export function generateStaticParams() {
+    return allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 }
