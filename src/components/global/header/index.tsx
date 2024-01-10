@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <Fragment>
             <header className='sticky top-0 backdrop-blur-md bg-background/15'>
-                <div className='max-w-maxi mx-auto px-[4%] h-16 flex items-center justify-between'>
+                <div className='mx-5 h-16 flex items-center justify-between'>
                     <div>
                         <Link href={'/'} className='font-semibold'>
                             Op Blog
